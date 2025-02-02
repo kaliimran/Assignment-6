@@ -19,7 +19,7 @@ const displayData = (posts) => {
           <div class="space-y-6 flex-1">
             <div class="flex gap-5">
               <h4># ${post.category}</h4>
-              <h5>Author: ${post.author.name}</h5>
+              <h5>Author:  ${post.author.name}</h5>
             </div>
             <h1 class="text-xl font-bold useColor">${post.title}</h1>
             <p class="text-[#12132D99] text-base">${post.description}</p>
@@ -49,13 +49,25 @@ const displayData = (posts) => {
           </div>
         </div>
         `
-
+        
         discussCard.appendChild(cardDiv);
+        detailShow(post);
 
 
         
     }
 };
+
+
+const detailShow = (post) => {
+  console.log(post);
+  const titleName = document.getElementById('titleName');
+  const showView = document.getElementById('showView');
+  titleName.innerText = post.title;
+  showView.innerText = post.view_count;
+}
+
+
 
 // Latest Api Fetch
 
@@ -68,12 +80,12 @@ const latestData = async() => {
 const latestDataDisplay = (latests) => {
     const latestCard = document.getElementById('latestCard');
     for(const latest of latests) {
-        console.log(latest);
+        // console.log(latest);
         const latestDiv = document.createElement('latestCard');
         latestDiv.innerHTML = `
         <div class="card bg-base-100 w-96 shadow-xl border">
             <figure class="px-10 pt-10">
-              <img src=${latest.cover_image} alt="Shoes" class="rounded-xl" />
+              <img src=${latest.cover_image} alt="image" class="rounded-xl" />
             </figure>
             <div class="card-body">
               <h6>${latest.author.posted_date}</h6>
