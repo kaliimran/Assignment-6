@@ -11,7 +11,7 @@
      <link rel="stylesheet" href="style.css">
     
 </head>
-<body class="container mx-auto mulishFont pb-10">
+<body class="container mx-auto mulishFont mb-10">
 
     <!-- header section -->
     <header class="mb-24">
@@ -79,11 +79,32 @@
     <!-- main section -->
     <main>
       <!-- let's Discuss -->
-      <div class="text-center">
+      <div class="text-center mb-12">
         <h1 class="text-4xl useColor font-extrabold">Let’s Discuss</h1>
         <p class="text-[#12132D99] interFont pt-6">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
       </div>
       <!-- discuss card api section -->
+       <section class="flex justify-between gap-6">
+        <!-- card -->
+        <div id="discussCard" class="flex-1"></div>
+        <!-- title -->
+         <button >click me</button>
+        <div>
+          <div class="bg-[#12132D0D] border rounded-xl p-6 mb-6">
+            <div class="flex justify-between gap-28">
+              <h1 class="text-xl font-bold useColor">Title</h1>
+              <h4 class="text-[#12132D99] interFont text-base">Mark as read <span>(0)</span></h4>
+            </div>
+            <div class="bg-white rounded-lg flex justify-between p-4 mt-4">
+              <h1 id="titleName" class="w-[200px]"></h1>
+              <div class="flex gap-3 items-center justify-between">
+                <img class="w-[23px] font-semibold text-base useColor" src="images/cardSection/show.png" alt="show">
+                <p class="text-[#12132D99] interFont text-base"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
       
     </main>
 
