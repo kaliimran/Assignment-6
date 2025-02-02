@@ -51,9 +51,48 @@ const displayData = (posts) => {
         `
 
         discussCard.appendChild(cardDiv);
+
+
+        
     }
 };
 
+// Latest Api Fetch
+
+const latestData = async() => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/latest-posts`)
+    const data = await res.json();
+    latestDataDisplay(data);
+}
+
+const latestDataDisplay = (latests) => {
+    const latestCard = document.getElementById('latestCard');
+    for(const latest of latests) {
+        console.log(latest);
+        const latestDiv = document.createElement('latestCard');
+        latestDiv.innerHTML = `
+        <div class="card bg-base-100 w-96 shadow-xl border">
+            <figure class="px-10 pt-10">
+              <img src=${latest.cover_image} alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body">
+              <h6>${latest.author.posted_date}</h6>
+              <h2 class="card-title font-extrabold">${latest.title}</h2>
+              <p class="text-[#12132D99]">${latest.description}</p>
+              <div class="flex gap-3">
+                <img class="w-[50px] rounded-full" src=${latest.profile_image} alt="">
+                <div>
+                  <h4 class="useColor">${latest.author.name}</h4>
+                  <p class="text-[#12132D99]">${latest.author.designation}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        `
+
+        latestCard.appendChild(latestDiv);
+    }
+}
 
 
 
@@ -63,4 +102,7 @@ const displayData = (posts) => {
 
 
 
+
+
+latestData()
 loadData();

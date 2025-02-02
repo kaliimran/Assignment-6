@@ -11,10 +11,10 @@
      <link rel="stylesheet" href="style.css">
     
 </head>
-<body class="container mx-auto mulishFont mb-10">
+<body class="mulishFont mb-10">
 
     <!-- header section -->
-    <header class="mb-24">
+    <header class="mb-24 container mx-auto">
         <!-- navbar section -->
         <div class="flex justify-between items-center py-12">
             <!-- retro logo -->
@@ -77,7 +77,7 @@
     </header>
 
     <!-- main section -->
-    <main>
+    <main class="container mx-auto">
       <!-- let's Discuss -->
       <div class="text-center mb-12">
         <h1 class="text-4xl useColor font-extrabold">Let’s Discuss</h1>
@@ -88,7 +88,6 @@
         <!-- card -->
         <div id="discussCard" class="flex-1"></div>
         <!-- title -->
-         <button >click me</button>
         <div>
           <div class="bg-[#12132D0D] border rounded-xl p-6 mb-6">
             <div class="flex justify-between gap-28">
@@ -105,6 +104,27 @@
           </div>
         </div>
        </section>
+
+      <!-- join our forum -->
+      <section class="text-white bg-[#12132D] bg-no-repeat bg-right rounded-xl bg-contain mt-28" 
+      style="background-image: url(images/joinforum.png);">
+       <div class="ml-24 py-24">
+         <h1 class="text-4xl font-extrabold mb-4">Join Our Forum</h1>
+         <p class="text-base text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+         <button class="font-bold text-xl rounded-full bg-[#797DFC] px-10 py-4 mt-8">Registered Now</button>
+       </div>
+      </section>
+
+      <!-- Latest Posts section -->
+      <section class="mt-28">
+        <div class="text-center mb-12">
+          <h1 class="font-extrabold text-4xl useColor pb-6">Latest Posts</h1>
+          <p class="interFont text-base text-[#12132D99] leading-[30px]">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+        </div>
+        <!-- Latest Card -->
+        <div id="latestCard" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+        </div>
+      </section>
       
     </main>
 
